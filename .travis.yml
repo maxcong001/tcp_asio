@@ -35,7 +35,7 @@ install:
 
 #before_script: wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz&& tar -zxf boost_1_68_0.tar.gz&&cd boost_1_68_0&&./bootstrap.sh --with-libraries=all > /dev/null&&./b2 -a > /dev/null&&cd ..
 #script: mkdir -p build &&cd build&& cmake ..&&make
-script : ls /usr/local/include&&ls /usr/include
+script : ls /usr/local/include/boost/core&&echo "test"&&ls /usr/include/boost/core
 #script: wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz&& tar -zxf boost_1_68_0.tar.gz&&cd boost_1_68_0&&./bootstrap.sh --with-libraries=all > /dev/null&&./b2 -a > /dev/null&&cd ..&&mkdir -p build &&cd build&& cmake ..&&make
 #script: wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz&& tar -zxf boost_1_68_0.tar.gz&&cd boost_1_68_0&&./bootstrap.sh --with-libraries=all&&./b2 -a&&cd ..
 #after_script: mkdir -p build &&cd build&& cmake ..&&make
