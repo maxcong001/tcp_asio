@@ -24,7 +24,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - gcc-7
-      - libboost1.65-all-dev
+      #- libboost1.65-all-dev
 
 
 before_install:
@@ -36,4 +36,4 @@ install:
 
 #script: wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz&& tar -zxf boost_1_68_0.tar.gz&&cd boost_1_68_0&&./bootstrap.sh --with-libraries=all&&./b2 -a&&cd ..
 #after_script: mkdir -p build &&cd build&& cmake ..&&make
-#script: mkdir -p build &&cd build&& cmake ..&&make
+script: apt-catch search boost&&mkdir -p build &&cd build&& cmake ..&&make
